@@ -66,7 +66,7 @@ class StudentController extends Controller
             'email',
             Rule::unique('students','email')->ignore($student->id)],
         'course'=>'required|string|max:255',
-        'age'=>'required|integer|min:1',
+        'age'=>'required|integer|min:2',
 
         ]);
         $student->update($validated);
